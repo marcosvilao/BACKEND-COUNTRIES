@@ -23,7 +23,7 @@ const { getApiInfo } = require('./src/middlewares/middleware.js');
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(process.env.PORT, async () => {
+  server.listen(process.env.DB_PORT, async () => {
     await getApiInfo()
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
